@@ -75,4 +75,27 @@ const himiInfo = {
 // Ternary Operator
 let age = 17;
 const isAdult = age >= 18 ? "Adult" : "Not adult";
-console.log({ isAdult });
+// Null coalscing operator - Only works with null & undefined
+let permanentAddress;
+permanentAddress !== null && permanentAddress !== void 0 ? permanentAddress : (permanentAddress = "No permanent address is available");
+// console.log({ permanentAddress });
+// Nullable type
+const showResult = (value) => {
+    if (value) {
+        console.log(`The value is ${value}`);
+    }
+    else {
+        console.log("Nothing");
+    }
+};
+// showResult(null);
+// Void - When the function does some action but does not return
+const showMessage = () => {
+    console.log("Hello World");
+};
+// showMessage();
+// Never - When the function throws an error, or runs infinite loop
+const showError = (message) => {
+    throw new Error(message);
+};
+// showError("Some random error");
